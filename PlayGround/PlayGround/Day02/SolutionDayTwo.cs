@@ -26,7 +26,7 @@ namespace PlayGround.Day2
 
         private void SetUp()
         {
-            NavigationCommands = File.ReadAllLines("../../../Day2/InputDayTwo.in").ToList();
+            NavigationCommands = File.ReadAllLines("../../../Day02/InputDayTwo.in").ToList();
         }
 
         public int Part1()

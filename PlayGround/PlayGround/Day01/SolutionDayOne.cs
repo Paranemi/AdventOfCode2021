@@ -14,7 +14,7 @@ namespace PlayGround.Day1
 
         private void SetUpInput()
         {
-            Depths = File.ReadAllLines("../../../Day1/InputDayOne.in").Select(x => int.Parse(x)).ToList();
+            Depths = File.ReadAllLines("../../../Day01/InputDayOne.in").Select(x => int.Parse(x)).ToList();
         }
 
         public int Part1()
@@ -61,8 +61,6 @@ namespace PlayGround.Day1
                         }
                         LastNumber = item;
                     }
-
-                    Console.WriteLine("OutOfRangeException: " + e);
                     return increases;
                 }
             }
