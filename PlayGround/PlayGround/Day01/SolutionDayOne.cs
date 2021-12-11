@@ -12,18 +12,15 @@ namespace PlayGround.Day1
 
         public int LastNumber { get; set; } = 0;
 
-        private void SetUpInput()
+        public SolutionDayOne()
         {
             Depths = File.ReadAllLines("../../../Day01/InputDayOne.in").Select(x => int.Parse(x)).ToList();
         }
 
         public int Part1()
         {
-            SetUpInput();
-
             int increases = 0;
             LastNumber = Depths.First();
-
 
             foreach (var item in Depths)
             {
@@ -39,8 +36,6 @@ namespace PlayGround.Day1
 
         public int Part2()
         {
-            SetUpInput();
-
             int increases = 0;
             for (int i = 0; i < Depths.Count; i++)
             {

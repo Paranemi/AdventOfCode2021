@@ -18,21 +18,19 @@ namespace PlayGround.Day2
         private List<string> Down { get; set; }
         private int Downs { get; set; }
 
-        private char[] charsToTrimForward = { 'f', 'o', 'r', 'w', 'a', 'r', 'd' };
-        private char[] charsToTrimUp = { 'u', 'p' };
-        private char[] charsToTrimDown = { 'd', 'o', 'w', 'n' };
+        private readonly char[] charsToTrimForward = { 'f', 'o', 'r', 'w', 'a', 'r', 'd' };
+        private readonly char[] charsToTrimUp = { 'u', 'p' };
+        private readonly char[] charsToTrimDown = { 'd', 'o', 'w', 'n' };
 
         private List<string> NavigationCommands { get; set; }
 
-        private void SetUp()
+        public SolutionDayTwo()
         {
             NavigationCommands = File.ReadAllLines("../../../Day02/InputDayTwo.in").ToList();
         }
 
         public int Part1()
         {
-            SetUp();
-
             Forward = NavigationCommands.Where(x => x.Contains("forward")).ToList();
 
             foreach (var item in Forward)
@@ -66,8 +64,6 @@ namespace PlayGround.Day2
 
         public int Part2()
         {
-            SetUp();
-
             int horizontal = 0;
             int depth = 0;
             int aim = 0;

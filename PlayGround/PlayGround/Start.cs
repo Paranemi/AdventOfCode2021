@@ -30,7 +30,7 @@ namespace PlayGround
             SolutionDayThree solutionDayThree = new SolutionDayThree();
 
             System.Console.WriteLine(solutionDayThree.Part1());
-            //System.Console.WriteLine(solutionDayThree.Part2());
+            System.Console.WriteLine(solutionDayThree.Part2());
         }
     }
 
